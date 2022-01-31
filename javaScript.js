@@ -57,9 +57,9 @@ function makeActivePage(active) {
     
     activeBrotherHighlight.classList.toggle("activeBrother");
     activeBrotherImage["src"] = activePhoto;
-    activeBrotherHighlightName.textContent = active.name;
-    activeBrotherHighlightRole.textContent = active.role;
-    activeBrotherHighlightClass.textContent = active.className;
+    activeBrotherHighlightName.textContent = `${active.lineNumber} ${active.firstName} ${active.lastName}`;
+    activeBrotherHighlightRole.textContent = "Positions Held: " + active.role;
+    activeBrotherHighlightClass.textContent = "Class Name: " + active.className;
 
     activeBrotherHighlight.append(activeBrotherImage, activeBrotherHighlightName, activeBrotherHighlightClass, activeBrotherHighlightRole);
     if (activeThirdCheck) {
