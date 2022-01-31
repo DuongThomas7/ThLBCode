@@ -6,6 +6,11 @@ body{
     
 }
 
+img {
+    height: auto;
+    width: 80%;
+}
+
 header {
     color: #C8B7A6;
 }
@@ -52,4 +57,5 @@ table, th, td {
     flex-direction: row;
     flex: 1;
     align-items: space-between;
+    gap: 25px;
 }

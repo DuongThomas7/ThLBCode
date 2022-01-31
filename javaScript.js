@@ -5,7 +5,7 @@ const results = document.getElementById("results");
 const activePage = document.getElementById("activePage");
 const activeCheck = document.getElementById("makeActivePage")
 let activeThirdCheck = false;
-
+let activePhoto = "";
 
 function addActive(lineNumber, firstName, lastName, lineName, className, role) {
     this.lineNumber = lineNumber;
@@ -56,12 +56,12 @@ function makeActivePage(active) {
     const activeBrotherHighlightClass = document.createElement("p")
     
     activeBrotherHighlight.classList.toggle("activeBrother");
-
+    activeBrotherImage["src"] = activePhoto;
     activeBrotherHighlightName.textContent = active.name;
     activeBrotherHighlightRole.textContent = active.role;
     activeBrotherHighlightClass.textContent = active.className;
 
-    activeBrotherHighlight.append(activeBrotherHighlightName, activeBrotherHighlightClass, activeBrotherHighlightRole);
+    activeBrotherHighlight.append(activeBrotherImage, activeBrotherHighlightName, activeBrotherHighlightClass, activeBrotherHighlightRole);
     if (activeThirdCheck) {
         console.log(active);
         const activeBrotherRow = document.createElement("div");
@@ -84,7 +84,7 @@ const elanAtar = new addActive("#96", "Elan", "Atar", "Aegis", "Pi Prodigies", "
 const rickyZheng = new addActive("#100", "Ricky", "Zheng", "Braveheart", "Pi Prodigies", "Alumni Chair");
 const andreiJao = new addActive("#101","Andrei", "Jao", "Drake.0", "Death Rho", "Vice-President External,Marketing")
 const joshOh = new addActive("#102", "Josh", "Oh", "Waki.zashi", "Death Rho", "Marketing");
-const tonyNguyen = new addActive("#103","Tony", "Nguyen", "KO.i", "Operation Omicron", "President");
+const tonyNguyen = new addActive("#103","Tony", "Nguyen", "KO.i", "Death Rho", "Treasurer");
 const joshPalafox = new addActive("#105", "Josh", "Palafox", "Cable", "Sigma Supremacy", "Recruitment");
 const zachTolentino = new addActive("#106", "Zach", "Tolentino", "Vulcan", "Sigma Supremacy", "//");
 const josefCalaunan = new addActive("#107", "Josef", "Calaunan", "Quicksilver", "Tau Takeover", "//");
@@ -149,6 +149,8 @@ activeCheck.addEventListener("click", () => {
     //console.log(activeList);
     for (actives in activeList) {
         //console.log(activeList[actives]);
+        activePhoto = "brotherPhotos/active" + actives +".jpeg";
+
         if (actives % 3 == 0) {
             activeThirdCheck = true;
         }
