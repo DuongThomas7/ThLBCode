@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javaScript.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Look Up Actives</title>
+</head>
+<body>
+    <header>
+        <h1>Search Function</h1>
+    </header>
+    <div class = "container">
+        
+            <fieldset class = "nameSearch">
+                <legend>Search Active By Name</legend>
+
+                <label for="firstName"> First Name:</label>
+                <input type="text" id = "firstName">
+                <label for="lastName"> Last Name:</label>
+                <input type="text" id = "lastName">
+                <input type="submit" id="findActive" value="Find Active">
+            </fieldset>
+        <div class="Results" id = "results">
+
+        </div>
+        <fieldset>
+            <legend>Search Active By Position</legend>
+
+            <select name = "Positions">
+                <optgroup label = "E-Board">
+                    <option value="president" selected>President</option>
+                    <option value="vicePresidentExternal">Vice President External</option>
+                    <option value="vicePresidentInternal">Vice President Internal</option>
+                    <option value="treasurer">Treasurer</option>
+                    <option value="secretary">Secretary</option>
+                </optgroup>
+                <optgroup label = "Cabinet">
+                    <option value="recruitment">Recruitment Chair</option>
+                    <option value="social">Social Chair</option>
+                    <option value="philanthropy">Philanthropy Chair</option>
+                </optgroup>
+            </select>
+        </fieldset>
+    </div>
+
+    <button type="submit" id="makeActivePage">Make Actives Highlight</button>
+
+    <div id="activePage">
+        
+    </div>
+
+   
+</body>
+</html>

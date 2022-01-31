@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    
+}
+
+header {
+    color: #C8B7A6;
+}
+
+table, th, td {
+    border: 1px solid #7D94B5;
+}
+
+#submit {
+    color: #7D94B5;
+}
+
+#submit:hover{
+    width: 150px;
+    height: 55px;
+}
+
+.nameSearch {
+    gap: 25px;
+}
+
+.Results {
+    display:flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+#activePage {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 100%;
+    align-items: center;
+    gap: 50px;
+}
+
+.activeBrother {
+    height: 300px;
+    width: 300px;
+}
+
+.activeRow {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: space-between;
+}
